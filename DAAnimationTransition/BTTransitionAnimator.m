@@ -20,6 +20,11 @@
     return 0.5;
 }
 
+/**
+ *  转场动画内容
+ *
+ *  @param transitionContext
+ */
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     
     self.transitionContext = transitionContext;
@@ -33,7 +38,7 @@
     UIBezierPath *originPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(CGRectGetWidth(fromVC.view.bounds), 0, 0, 0)];
     CGPoint extremePoint = CGPointMake(CGRectGetWidth(fromVC.view.bounds),CGRectGetHeight(toVC.view.bounds));
     
-    float radius = sqrtf(extremePoint.x * extremePoint.x + extremePoint.y * extremePoint.y);
+    float radius = sqrtf(extremePoint.x * extremePoint.x + extremePoint.y * extremePoint.y); 
     UIBezierPath *finalPath = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(CGRectMake(CGRectGetWidth(fromVC.view.bounds), 0, 0, 0), -radius, -radius)];
     
     CAShapeLayer *maskLayer = [CAShapeLayer layer];

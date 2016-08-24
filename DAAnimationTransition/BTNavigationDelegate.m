@@ -13,6 +13,9 @@
 
 @end
 
+/**
+ *  转场动画
+ */
 @implementation BTNavigationDelegate
 - (nullable id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
